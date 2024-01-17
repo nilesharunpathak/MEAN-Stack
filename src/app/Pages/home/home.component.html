@@ -1,0 +1,75 @@
+<div class="container">
+
+    <!-- employee-form.component.html -->
+<br> <br>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" formControlName="name" />
+    </div>
+  
+    <div class="form-group">
+      <label for="position">Position:</label>
+      <input type="text" class="form-control" id="position" formControlName="position" />
+    </div>
+  
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <input type="text" class="form-control" id="department" formControlName="department" />
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <br><br><br><br>
+
+  <!-- employee-form.component.html -->
+
+<!-- ... Your existing form code ... -->
+<!-- employee-form.component.html -->
+
+<!-- Your existing form code -->
+
+<div>
+    <h2>Employee Data</h2>
+    <!-- <div [formGroup]="employeeForm">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" />
+      </div>
+      <div>
+        <label for="department">Department:</label>
+        <input type="text" id="department" formControlName="department" />
+      </div>
+    </div> -->
+  
+    <table class="table tabel-bordered table-stripped table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Department</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let employee of filteredEmployees"> -->
+            <tr *ngFor="let employee of employees">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.department }}</td>
+          <td><button class="btn btn-primary" >Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div>
+      <!-- <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 0">Previous</button>
+      <span>Page {{ currentPage + 1 }}</span>
+      <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages - 1">Next</button> -->
+    </div>
+  </div>
+  
+  
+  
+</div>
